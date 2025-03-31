@@ -49,3 +49,14 @@ A. O projeto deverá estar disponível no Github
     ○ Decorrido o prazo de entrega, nenhum outro commit deverá ser enviado ao repositório do projeto.
     ○ Adicione as dependências que considerar necessárias;
     ○ Deverá estar disponível no repositório de versionamento todos os arquivos e scripts utilizados para a solução
+
+
+
+
+/* 
+
+    php artisan jwt:secret 
+
+
+
+*/
