@@ -45,6 +45,8 @@ Execute o Composer dentro do container Laravel:
 docker exec -it laravel_app composer update
 ```
 
+Crie o arquivo .env na raiz do projeto e copie o conteúdo de .env.example para este novo arquivo.
+
 ---
 
 ## 🛠️ Criar estrutura do banco de dados
