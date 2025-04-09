@@ -7,6 +7,8 @@ use App\Http\Controllers\ServidorTemporarioController;
 use App\Http\Controllers\UnidadeController;
 use App\Http\Controllers\LotacaoController;
 use App\Http\Controllers\PessoaController;
+use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\PessoaFotoController;
 
 Route::post('/login', function (Request $request) {
     $credentials = $request->only('email', 'password');
@@ -34,4 +36,7 @@ Route::middleware('auth:api')->group(function () {
     Route::apiResource('servidores-temporarios', ServidorTemporarioController::class)->only(['index', 'store', 'update', 'show']);
     Route::apiResource('unidades', UnidadeController::class)->only(['index', 'store', 'update', 'show']);
     Route::apiResource('lotacoes', LotacaoController::class)->only(['index', 'store', 'update', 'show']);
+
+    Route::post('/pessoa_foto', [PessoaFotoController::class, 'store']);
+    Route::get('/pessoa_foto/{pes_id}', [PessoaFotoController::class, 'show']);
 });
